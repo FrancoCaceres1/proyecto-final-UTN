@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(84, 84, 187);
+}
+.div-encabezado {
+  background-color: aquamarine;
+  width: 25%;
+}
+.imagen-encabezado {
+  padding: 10px;
+  background-color: red;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+a {
+  background-color: red;
+}
+
