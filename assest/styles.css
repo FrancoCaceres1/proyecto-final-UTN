@@ -4,50 +4,164 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: #242224;
+}
+@font-face {
+  font-family: "shlop";
+  src: url(fonts/shlop.ttf);
+}
 @media (max-width: 1920px) {
   .encabezado {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: radial-gradient( #000100, #242224 38%);
-    /* background-color: #242224; */
+    border-bottom: 5px solid #B1FF4B;
+    background: url(images-video/header.png);
 
   }
   .imagen-encabezado-1 {
     transform: scaleX(-1);
     width: 15%;
+    filter: saturate(150%);
+    opacity: 80%;
   }
   .imagen-encabezado-2 {
     width: 15%;
+    filter: saturate(150%);
+    opacity: 80%;
   }
   .imagen-titulo {
     padding: 10px;
     width: 23%;
+    filter: saturate(120%);
   }
   .video-presentacion {
     width: 600px;
   }
+  .section-1 {
+    background: url(images-video/portalver2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
 }
 
-/* VideoPlayer */
-.presentacion-section-1 {
-  background-color: red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .div-section-1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  backdrop-filter: sepia(80%);
+  padding-top: 10px;
+  padding-bottom: 15px;
 }
 .tv-series {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  backdrop-filter: sepia(80%);
 }
 .subtitulo-section-1 {
-  padding: 15px;
-  font-size: 43px;
+  font-size: 63px;
+  color: #11ADC4;
+  -webkit-text-stroke: 0.1px #B1FF4B;
+  font-family: "shlop";
+  background-color:#242224;
+  padding: 5px 15px;
+  border-radius: 15%;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
+.boton-1-presentacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 30%;
+}
+.boton-1-presentacion:hover {
+  opacity: 60%;
+}
+.boton-1 {
+  position: absolute;
+  z-index: 2;
+  width: 450px;
+  height: 180px;
+  transform: translateX(-475px);
+}
+.boton-2-presentacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 30%;
+}
+.boton-2-presentacion:hover {
+  opacity: 60%;
+}
+.boton-2 {
+  position: absolute;
+  z-index: 2;
+  width: 450px;
+  height: 180px;
+  transform: translateX(475px);
+}
+.imagen-presentacion-0 {
+  height: 255px;
+}
+.imagen-presentacion-4 {
+  height: 255px;
+  width: 400px;
+}
+.imagen-0 {
+  order: 0;
+  width: 400px;
+  z-index: 0;
+  transform: translateX(150px);
+  filter: blur(0.8px); 
+}
+.imagen-1 {
+  order: 1;
+  width: 450px;
+  z-index: 1;
+}
+.imagen-2 {
+  order: 2;
+  width: 500px;
+  z-index: 2;
+  cursor: pointer;
+}
+.imagen-3 {
+  order: 3;
+  width: 450px;
+  z-index: 1;
+}
+.imagen-4 {
+  order: 4;
+  width: 400px;
+  z-index: 0;
+  transform: translateX(-150px);
+  filter: blur(0.8px); 
+}
+.flecha-izquierda {
+  position: absolute;
+  width: 180px;
+  opacity: 50%;
+}
+.flecha-izquierda:hover {
+  opacity: 90%;
+}
+.flecha-derecha {
+  position: absolute;
+  width: 180px;
+  opacity: 50%;
+}
+.flecha-derecha:hover {
+  opacity: 90%;
+}
