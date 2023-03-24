@@ -1,3 +1,5 @@
+const llamadaApi = fetch("https://rickandmortyapi.com/api/character");
+const $gridPersonajes = document.querySelector(".div-personajes");
 const $botonAnterior = document.querySelector(".boton-1-presentacion");
 const $botonSiguiente = document.querySelector(".boton-2-presentacion");
 const $imagenCero = document.querySelector(".posicion-0");
@@ -82,3 +84,32 @@ function imagenAnterior() {
     $imagenCero.classList.remove("imagen-presentacion-0")
   };
 };
+
+llamadaApi.then((data) => {
+  return data.json();
+}).then((data) => {
+
+  const personajes = data.results;
+  console.log(personajes);
+
+  for(let i = 0; i < personajes.length; i++) {
+    $gridPersonajes.innerHTML += `
+    <div class= "fondo-carta">
+      <div class="personaje-grid">
+        <img class="imagen-personaje" src="${personajes[i].image}">
+      <div class= "descripcion-personaje">
+      <div class= "nombre-personaje">
+        <h2>${personajes[i].name}</h2>
+      </div>
+      <div class = "atributos-personaje">
+        <p>gender: ${personajes[i].gender}</p>
+        <p>species: ${personajes[i].species}</p>
+        <p>status: ${personajes[i].status}</p>
+      </div>
+    </div>
+  </div>
+    </div>
+      
+    `
+  }
+});
