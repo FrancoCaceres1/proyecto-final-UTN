@@ -24,13 +24,6 @@ $botonSiguiente.addEventListener("click", imagenSiguiente);
 $botonMenu.addEventListener("click", abrirMenu);
 window.addEventListener("scroll", estaFuera);
 
-window.addEventListener("scroll", () => {
-  const { bottom } = footer.getBoundingClientRect();
-  if (bottom <= window.innerHeight) {
-    console.log("hola");
-  }
-});
-
 function estaFuera() {
   const posicionDeLaBarra = window.scrollY;
   if (posicionDeLaBarra >= $posicionSeccion) {
